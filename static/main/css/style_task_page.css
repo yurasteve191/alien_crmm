@@ -1,0 +1,189 @@
+.dashboard{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgb(0, 25, 25);
+  box-shadow: 0px 0px 25px black;
+}
+.dash-r{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 20%;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 0px 10px black;
+  content: none;
+}
+.dash-l{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 80%;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: -5px 0px 10px black;
+  content: none;
+}
+.user-content{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  content: none;
+}
+.user-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+}
+.user-icon img{
+  width: 100px;
+  height: 100%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px black;
+}
+.user-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  height: 300px;
+  width: 100%;
+  font-family: "Audiowide", sans-serif;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+.menu-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 10%;
+  border-bottom: 1px solid white;
+  content: none;
+}
+.menu-content button{
+  background-color: transparent;
+  margin: 5px;
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 400;
+  height: 60%;
+}
+.menu-content button:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+.data-content{
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+.my_tasks{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+}
+.create_new{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+}
+.create_new input{
+  width: 400px;
+  height: 50px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.create_new div{
+  margin-top: 15px;
+}
+.create_new button{
+  width: 400px;
+  height: 50px;
+  border: 0px;
+  margin: 5px;
+  background-color: rgba(0,0,255,0.5);
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.create_new button:hover{
+  background-color: rgba(0,0,255,0.8);
+}
+
+.sent_tasks{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+}
+
+
+
+.tasks-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 30px;
+  background-color: rgb(0, 25, 25);
+  box-shadow: 0px 0px 25px black;
+}
+
+.task-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  width: 180px;
+  height: 250px;
+  border: 2px solid white;
+  margin: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px black;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+}
+
+
+.task-container:hover{
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+}

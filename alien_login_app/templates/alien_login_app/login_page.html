@@ -1,0 +1,21 @@
+{% extends '../main/index.html' %}
+{% load static %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'login/css/style_login_form.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<!-- LOGIN -->
+<div class="login_container">
+  <p>Login</p>
+  <form class="" action="javascript:void(0);" method="post">
+    <input id="user-login-input" type="text" placeholder="Name" name="" value="" required>
+    <input id="user-password-input" type="password" placeholder="Password" name="" value="" required>
+    <p id="form-alarm-p" style="color:red; font-size: 15px;"> The user not exists! </p>
+    <button onclick="login();" name="button">login</button>
+  </form>
+</div>
+
+<script src="{% static 'login/js/login.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock %}</title>
+    {% csrf_token %}
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style_loading.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style_top_bar.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+
+    {% block styles %}
+    {% endblock %}
+    <!-- <link rel="stylesheet" href="css/style_login_form.css">
+    <link rel="stylesheet" href="css/style_bottom_bar.css">
+    <link rel="stylesheet" href="css/style_main_page.css">
+    <link rel="stylesheet" href="css/style_task_page.css"> -->
+  </head>
+  <body>
+      <!-- loading -->
+    <div class="full-screen flex-center dark-background" id="loading_el">
+      <div class="loading-div ">
+        <canvas id="loading_canvas" important>
+          Your browser do not support the canvas
+        </canvas>
+      </div>
+    </div>
+    <script src="{% static 'main/js/js_loading.js' %}"></script>
+    <!-- loading -->
+    <div class="nav_bar">
+      <div class="menu-bar">
+        {% block logout%}{% endblock %}
+      </div>
+      <div class="alien-icon"></div>
+      <div class="time-bar">
+        <p>Time: 15:43 pm</p>
+      </div>
+    </div>
+    <div class="page margin-page">
+    {% block body %} {% endblock %}
+
+    </div>
+
+    <script src="{% static 'main/js/send_request.js' %}"></script>
+    <script src="{% static 'main/js/sessions.js' %}"></script>
+    <script src="{% static 'main/js/task_controller.js' %}"></script>
+  </body>
+</html>

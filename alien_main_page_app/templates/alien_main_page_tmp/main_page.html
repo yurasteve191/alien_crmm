@@ -1,0 +1,95 @@
+{% extends '../main/index.html' %}
+{% load static %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'alien_main_page_stc/css/style_task_page.css' %}">
+  <link rel="stylesheet" href="{% static 'alien_main_page_stc/css/dropdown_menu.css' %}">
+{% endblock %}
+
+{% block logout%}
+  <button onclick="window.location.href = 'logout/'" type="button" name="button">Log out</button>
+{% endblock %}
+
+{% block body %}
+<div class="page margin-page">
+
+      <div class="dashboard">
+        <div class="dash-r">
+          <div class="user-content">
+            <div class="user-icon">
+              <img src="img/alien_icon.png" alt="">
+            </div>
+            <div class="user-data">
+              <h3>Alien Raptor</h3>
+              <p>Work status: online</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-l">
+          <div class="menu-content">
+            <button onclick="switch_data_content('my_tasks')" type="button" name="button">My tasks</button>
+            <button onclick="switch_data_content('create_new')" type="button" name="button">Create new</button>
+            <button onclick="switch_data_content('sent_tasks')" type="button" name="button">Sent tasks</button>
+          </div>
+          <div class="data-content">
+            <div style="display:none;" class="my_tasks">
+              <div class="task-container">
+                NO DATA
+              </div>
+              <div class="task-container">
+                NO DATA
+              </div>
+              <div class="task-container">
+                NO DATA
+              </div>
+              <div class="task-container">
+                NO DATA
+              </div>
+              <div class="task-container">
+                NO DATA
+              </div>
+            </div>
+            <div style="display:none;" class="create_new">
+              <div class="inpt_div">
+                <input id="create_task_title" type="text" name="" value="" placeholder="Task title">
+              </div>
+              <div class="inpt_div">
+                <input id="create_task_description" type="text" name="" value="" placeholder="Task description">
+              </div>
+              <div class="dropdown inpt_div">
+                <input id="create_select_to" type="text" name="" value="" placeholder="Send to">
+                <div class="dropdown-content">
+                  <a onclick="document.getElementById('create_select_to').value = '1'">1</a>
+                  <a onclick="document.getElementById('create_select_to').value = '2'">2</a>
+                  <a onclick="document.getElementById('create_select_to').value = '3'">3</a>
+                  <a onclick="document.getElementById('create_select_to').value = '3'">3</a>
+                  <a onclick="document.getElementById('create_select_to').value = '3'">3</a>
+                  <a onclick="document.getElementById('create_select_to').value = '3'">3</a>
+                </div>
+              </div>
+            <button onclick="add_task();" type="button" name="button">Create</button>
+            </div>
+            <div style="display:none;" class="sent_tasks">
+              <div id="task_1" class="task-container">
+                <div class="task-container-title">
+                  <h3>title</h3>
+                </div>
+                <div class="task-container-description">
+                  <p>description</p>
+                </div>
+                <div class="task-container-from">
+                  <p>from: raptor</p>
+                </div>
+                <div class="task-container-created-at">
+                  <p>create at: 15:00</p>
+                </div>
+              </div>
+              <div class="task-container">
+                NO DATA
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
